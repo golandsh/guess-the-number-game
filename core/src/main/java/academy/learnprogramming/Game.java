@@ -14,7 +14,7 @@ public interface Game {
 
     int getRemainingGuesses();
 
-    void reset();
+    void reset(NumberGenerator generator);
 
     void check();
 
