@@ -26,6 +26,10 @@ public class Main {
         // log generated number
         log.info("number = {}", number);
 
+        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+        log.info("main = {}", messageGenerator.getMainMessage());
+        log.info("result = {}", messageGenerator.getResultMessage());
+
         // close context (container)
         context.close();
     }

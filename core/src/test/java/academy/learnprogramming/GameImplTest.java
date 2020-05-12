@@ -17,7 +17,7 @@ public class GameImplTest {
     @BeforeEach
     void setup() {
         initMocks(this);
-        gameUnderTest = new GameImpl();
+        gameUnderTest = new GameImpl(this.numberGenerator);
         when(this.numberGenerator.next()).thenReturn(30);
         when(this.numberGenerator.getMaxNumber()).thenReturn(100);
         this.gameUnderTest.reset(this.numberGenerator);
